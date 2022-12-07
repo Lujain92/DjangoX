@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Details about {{ country.name }}</h2>
+<h2>author: {{ country.author.first_name }} {{ country.author.last_name }}</h2>
+<p>{{ country.desc }}</p>
+<a href="{% url 'country_update' country.pk %}">+ Update country</a>
+<a href="{% url 'country_delete' country.pk %}">+ Delete country</a>
+
+{% endblock content %}
